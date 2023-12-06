@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+env.bak/
+env1/
+venv1/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Compiled Python files
+*.pyc
+
+# Compiled C extension
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Python installer files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Visual Studio Code directories
+.vscode/
+
+# User-specific VSCode settings
+.code-workspace
+
+# Project-specific settings
+/.vscode/
