@@ -39,3 +39,5 @@ pip-delete-this-directory.txt
 
 # Project-specific settings
 /.vscode/
+
+.env
