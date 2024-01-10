@@ -4,7 +4,8 @@ from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 
 import os 
-import requests 
+import requests
+
 #endregion
 
 #region Variables
@@ -32,7 +33,7 @@ def trim_empty_lines(input_string, amount_of_Lines_to_return):
 
 #Many improvements can be made, we'll deal with that later. 
 
-#region WebScrapper foundation
+#region WebScraper foundation
 
 # Make a request to the website
 url = 'https://www.crummy.com/software/BeautifulSoup/'

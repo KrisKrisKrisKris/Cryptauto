@@ -91,3 +91,17 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+#START USER ALTERED SETTINGS
+
+#Sets default crawlers to output to .json file and always overwrite
+FEEDS = {
+    'output.json':{
+        'format': 'json',
+        'overwrite': True,
+        },
+    }
+
+
+
+#endregion
