@@ -101,7 +101,10 @@ FEEDS = {
         'overwrite': True,
         },
     }
-
+#Log settings
+#LOG_ENABLED = True
+#LOG_FILE = 'log'
+#LOG_FILE_APPEND = False
 
 
 #endregion
