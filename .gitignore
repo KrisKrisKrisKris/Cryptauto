@@ -41,5 +41,8 @@ pip-delete-this-directory.txt
 /.vscode/
 
 .env
-.json
-.txt
+
+#Logs and outputs
+*.json
+*.txt
+*.log
