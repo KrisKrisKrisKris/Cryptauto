@@ -13,21 +13,29 @@ from scrapy import signals
 
 
 class CoindeskSpider(CrawlSpider):
-    #start region, declare spider name and allowed domains, as well as scripts to follow
+    #Region Initialize spider
+    #declare spider name and allowed domains, as well as scripts to follow
     name = "coindesk"
     allowed_domains = ["coindesk.com"]
     start_urls = ["https://coindesk.com"]
+
     rules = (
-        Rule(LinkExtractor(), callback = 'parse'),
+        Rule(LinkExtractor(), callback = 'parse', follow = True),
     )
+
+    custom_settings = {
+        'DEPTH_LIMIT': 3
+    }
+    
+    
     #endregion
 
-    #Start region
+    #Region spider process
     #Actions to be performed on every crawled page
     def parse(self, response):
         unwanted = None
-        #Record URL as a str
-        url = response.url
+        #Record URL 
+        url = str(response.url)
         #Create tree of all elements within the html page
         soup = BeautifulSoup(response.text, 'html.parser')
         
@@ -58,7 +66,7 @@ class CoindeskSpider(CrawlSpider):
         except AttributeError:
             return "No article found"
             
-        #Put all specified data from the page into a list   
+        #Put all specified data from the page into a list
         combined_data = {
             'url': url,
             'article title': article_title,
